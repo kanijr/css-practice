@@ -1,7 +1,30 @@
-html {
-  max-width: 720px;
+.card > p {
+  color: rgba(174, 255, 0, 0.275);
+  -webkit-text-fill-color: red;
+  -webkit-text-stroke: 0.6px blue;
 }
 
-body {
-  background: #fff;
+p:focus,
+p:active,
+p:hover {
+  -webkit-text-fill-color: rgb(0, 255, 0);
+  -webkit-text-stroke: 0.6px rgb(255, 0, 153);
+
+  direction: rtl;
+}
+.card {
+  color: red;
+}
+
+#text {
+  color: inherit;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: initial;
+  /* writing-mode: vertical-lr; */
+  /* text-align: center;
+  text-transform: uppercase; */
+}
+
+* {
+  font-family: 'Roboto', sans-serif;
 }

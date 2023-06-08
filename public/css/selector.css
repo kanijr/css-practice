@@ -1,0 +1,32 @@
+/* :root {
+  background-color: purple;
+} */
+
+html {
+  max-width: 720px;
+}
+
+body {
+  background: #fff;
+}
+/* * {
+  color: blueviolet;
+ }
+.box {
+  background-color: lightgray;
+}
+ #user {
+  color: red;
+}
+h1,
+h2,
+button.button {
+  color: green;
+}
+div * {
+  color: black;
+} */
+
+.li:first-child {
+  color: red;
+}
