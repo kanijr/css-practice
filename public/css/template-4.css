@@ -1,0 +1,236 @@
+:root {
+  --space-m: 12px;
+  --space-xm: 16px;
+  --space-l: 24px;
+  --space-b: 36px;
+
+  --size-s: 14px;
+  --size-d: 16px;
+  --size-l: 20px;
+
+  --color-border: #dee2e6;
+  --color-primary: #0d6efd;
+  --color-white: #fff;
+  --color-title: #212529;
+  --color-text: #343a40;
+
+  --weight-title: 500;
+  --weight-text: 400;
+
+  --border-radius: 12px;
+}
+
+/* =============================== */
+
+.page {
+  font-family: 'Roboto';
+  background-color: #ffffff;
+  padding: 0 15px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.page_content {
+  max-width: 960px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+
+/* ================================== */
+
+.header {
+  padding: var(--space-l) 0;
+  border-bottom: solid 1px var(--color-border);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 17px;
+  width: 24px;
+  height: 24px;
+  border-radius: calc(var(--border-radius) / 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: var(--color-white);
+  background-color: var(--color-primary);
+}
+
+.nav {
+  display: flex;
+}
+
+.nav_link {
+  color: var(--color-text);
+  font-size: var(--size-d);
+  text-decoration: none;
+  line-height: 100%;
+}
+
+.nav_inline {
+  gap: var(--space-l);
+}
+
+.nav_vertical {
+  gap: var(--space-xm);
+  flex-direction: column;
+  color: #6c757d;
+}
+
+.nav_link:hover {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.footer {
+  padding: var(--space-l) 0;
+  border-top: solid 1px var(--color-border);
+  margin-bottom: var(--space-l);
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer_copyright {
+  font-size: var(--size-s);
+  color: var(--color-text);
+  display: block;
+  margin-top: var(--space-l);
+}
+
+.footer_title {
+  font-size: var(--size-l);
+  color: #212529;
+  display: block;
+  margin-bottom: var(--space-m);
+  font-weight: var(--weight-title);
+}
+
+.button {
+  display: inline-block;
+  font-size: var(--size-d);
+  text-decoration: none;
+  padding: var(--space-m) var(--space-xm);
+  border-radius: var(--border-radius);
+}
+
+.button:hover {
+  opacity: 0.7;
+}
+
+.main {
+  display: flex;
+  gap: calc(var(--space-b) * 2);
+  align-items: center;
+}
+
+.main_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-l);
+}
+
+.main_image {
+  border-radius: 12px;
+  width: 500px;
+  height: 500px;
+}
+
+.main_title {
+  font-size: 36px;
+  color: var(--color-title);
+  font-weight: var(--weight-title);
+  line-height: 120%;
+}
+
+.main_text {
+  color: var(--color-text);
+  font-weight: var(--weight-text);
+  font-size: var(--size-d);
+  line-height: 170%;
+}
+
+.main_button {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  width: 100%;
+  max-width: 120px;
+}
+
+.featured {
+  display: flex;
+  padding-bottom: var(--space-b);
+  border-bottom: solid 1px var(--color-border);
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  gap: var(--space-l);
+}
+
+.card_image {
+  width: 64px;
+  height: 64px;
+  border-radius: var(--border-radius);
+}
+
+.card_title {
+  font-size: 32px;
+  font-weight: var(--weight-title);
+  color: var(--color-title);
+}
+
+.card_text {
+  font-weight: var(--weight-text);
+  font-size: var(--size-d);
+  line-height: 150%;
+  color: var(--color-text);
+}
+
+.card_button {
+  text-decoration: underline;
+  width: 100%;
+  max-width: 160px;
+  padding: 0;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-l);
+  background: var(--color-primary);
+  border-radius: var(--border-radius);
+}
+
+.form_content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-m);
+  flex-basis: 240px;
+}
+
+.form_title {
+  color: var(--color-white);
+  font-weight: var(--weight-title);
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.form_button {
+  font-size: var(--size-l);
+  border-radius: 4px;
+  text-align: center;
+  background-color: var(--color-white);
+  width: 100%;
+  color: var(--color-text);
+}
