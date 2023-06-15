@@ -1,3 +1,35 @@
+@keyframes changeColor {
+  from {
+    opacity: 1;
+    color: var(--color-text);
+    background-color: var(--color-primary);
+  }
+  to {
+    color: white;
+    background-color: greenyellow;
+  }
+  25% {
+    opacity: 0.5;
+    color: rgb(83, 83, 83);
+    background-color: rgb(47, 189, 255);
+  }
+  50% {
+    opacity: 0;
+    color: rgb(133, 133, 133);
+    background-color: rgb(47, 255, 213);
+  }
+  75% {
+    opacity: 0.5;
+    color: rgb(199, 199, 199);
+    background-color: rgb(47, 255, 75);
+  }
+  100% {
+    opacity: 1;
+    color: white;
+    background-color: greenyellow;
+  }
+}
+
 :root {
   --space-m: 12px;
   --space-xm: 16px;
@@ -38,6 +70,8 @@
   display: flex;
   flex-direction: column;
   gap: 80px;
+
+  padding-top: 74px;
 }
 
 /* ================================== */
@@ -45,6 +79,13 @@
 .header {
   padding: var(--space-l) 0;
   border-bottom: solid 1px var(--color-border);
+
+  position: fixed;
+  width: 960px;
+  top: 0;
+  left: calc(960 / 2 - 50%);
+  background-color: white;
+  z-index: 1;
 
   display: flex;
   justify-content: space-between;
@@ -72,6 +113,8 @@
   font-size: var(--size-d);
   text-decoration: none;
   line-height: 100%;
+
+  transition: color 1s;
 }
 
 .nav_inline {
@@ -195,7 +238,9 @@
 }
 
 .card_button:hover {
-  opacity: 0.7;
+  animation: changeColor 0.5s;
+  color: white;
+  background-color: greenyellow;
 }
 
 .form {
@@ -230,4 +275,33 @@
   width: 100%;
   max-width: 160px;
   color: var(--color-text);
+}
+
+.icon {
+  background-color: var(--color-primary);
+  width: 30px;
+  height: 30px;
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  color: var(--color-white);
+  position: absolute;
+
+  top: calc(50% - 15px);
+  left: calc(5%);
+}
+
+.slyder_right {
+  left: calc(95% - 30px);
+}
+
+.icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.hero_slyder {
+  position: relative;
 }
