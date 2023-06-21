@@ -1,34 +1,16 @@
-@keyframes changeColor {
-  from {
-    opacity: 1;
-    color: var(--color-text);
-    background-color: var(--color-primary);
-  }
-  to {
-    color: white;
-    background-color: greenyellow;
-  }
-  25% {
-    opacity: 0.5;
-    color: rgb(83, 83, 83);
-    background-color: rgb(47, 189, 255);
-  }
-  50% {
-    opacity: 0;
-    color: rgb(133, 133, 133);
-    background-color: rgb(47, 255, 213);
-  }
-  75% {
-    opacity: 0.5;
-    color: rgb(199, 199, 199);
-    background-color: rgb(47, 255, 75);
-  }
-  100% {
-    opacity: 1;
-    color: white;
-    background-color: greenyellow;
-  }
+@font-face {
+  font-family: 'Segment';
+  src: url('/font/Segment-Regular.otf');
+  font-weight: 400;
 }
+
+@font-face {
+  font-family: 'SegmentBold';
+  src: url('/font/Segment-SemiBold.otf');
+  font-weight: 700;
+}
+
+@layer normalize,main;
 
 :root {
   --space-m: 12px;
@@ -245,6 +227,7 @@
 
 .form {
   display: flex;
+  gap: var(--space-l);
   justify-content: space-between;
   align-items: center;
   padding: var(--space-b);
@@ -275,6 +258,12 @@
   width: 100%;
   max-width: 160px;
   color: var(--color-text);
+  text-align: center;
+}
+
+.form_action {
+  width: 100%;
+  max-width: 160px;
 }
 
 .icon {
@@ -304,4 +293,44 @@
 
 .hero_slyder {
   position: relative;
+}
+
+:root {
+  scroll-behavior: smooth;
+}
+
+.blog {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+@media all and (max-width: 800px) and (min-width: 600px) {
+  .blog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media all and (max-width: 600px) {
+  .blog {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (width<=560px) {
+  .form {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: fit-content;
+    margin: 0 auto;
+  }
+
+  .form_info {
+    max-width: 300px;
+    width: 100%;
+  }
+
+  .form_content {
+    align-items: center;
+  }
 }
